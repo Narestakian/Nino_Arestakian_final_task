@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationTestSuite" parallel="methods" thread-count="1">
+    <test name="SeleniumTests">
+        <classes>
+            <class name="testSelenium.RegPageTest"/>
+            <class name="testSelenium.FilterProductsTest"/>
+            <class name="testSelenium.ShopSortProductTest"/>
+            <class name="testSelenium.BasketTest"/>
+        </classes>
+    </test>
+    <test name="SelenideTests">
+        <classes>
+            <class name="testSelenide.PhpTravelsRegTest"/>
+            <class name="testSelenide.PhpTravelsHotelsTest"/>
+            <class name="testSelenide.MostExpensiveHotelTest">
+                <methods>
+                    <include name="mostExpensiveHotelTest"/>
+                    <include name="fillBookingInfoTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
